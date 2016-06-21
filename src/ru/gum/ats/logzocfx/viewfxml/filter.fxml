@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.gum.ats.logzocfx.logzocctrl.FilterCtrl">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="53.0" prefWidth="600.0">
+               <children>
+                  <CheckBox fx:id="cbFlagAll" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" onAction="#actionAllDate" text="All Date" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="cbFlagOne" layoutX="165.0" layoutY="14.0" mnemonicParsing="false" onAction="#actionOneDate" text="One Date" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="cbFlagRange" layoutX="300.0" layoutY="14.0" mnemonicParsing="false" onAction="#actionRangeDates" text="Range Dates" AnchorPane.leftAnchor="415.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="40.0" prefWidth="590.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <children>
+                  <AnchorPane prefHeight="46.0" prefWidth="590.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="100.0" text="Control Date" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="20.0" prefWidth="70.0" text="Start Date" AnchorPane.leftAnchor="215.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="20.0" prefWidth="70.0" text="End Date" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="590.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <children>
+                  <DatePicker id="controlDate" fx:id="datePicControl" onAction="#actionControlDate" showWeekNumbers="true">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <DatePicker id="startDate" fx:id="datePicStart" onAction="#actionStartDate" showWeekNumbers="true">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <DatePicker id="endDate" fx:id="datePicEnd" onAction="#actionEndDate" showWeekNumbers="true">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <CheckBox fx:id="cbFlagNumber" mnemonicParsing="false" onAction="#actionSpecificNumber" text="The specific number">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <TextField id="dirId" fx:id="tfNumber" onAction="#actionTextNumber">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#actionAddNumber" prefHeight="28.0" prefWidth="100.0" text="Add number">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnClear" mnemonicParsing="false" onAction="#actionClear" prefHeight="28.0" prefWidth="100.0" text="Clear out">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="590.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <CheckBox fx:id="cbFlagRoute" mnemonicParsing="false" onAction="#actionPartRoute" text="Select a particular route?">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="cbFlagExternal" mnemonicParsing="false" onAction="#actionOnlyExtern" text="Only external phone calls?">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <ComboBox id="cssRouteCombo" fx:id="routeCombo" cache="true" editable="true" onAction="#actionRouteCombo" prefWidth="150.0" promptText="routeCombo">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="590.0">
+               <children>
+                  <CheckBox fx:id="cbFlagLim" mnemonicParsing="false" onAction="#actionPartLim" text="Select a particular Lim?">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <ComboBox id="cssLimCombo" fx:id="limCombo" editable="true" onAction="#actionLimCombo" prefWidth="150.0" promptText="limCombo">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <CheckBox fx:id="cbFlagNonZero" mnemonicParsing="false" onAction="#actionNonZero" text="Calls only non-zero duration?">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="130.0" prefWidth="600.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="selectionMsg" layoutX="14.0" layoutY="6.0" text="selectionMsg" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dateMsg" layoutX="14.0" layoutY="23.0" text="dateMsg" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numberMsg" layoutX="14.0" layoutY="32.0" text="numberMsg" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="routeMsg" layoutX="14.0" layoutY="49.0" text="routeMsg" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="65.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="limMsg" layoutX="14.0" layoutY="66.0" text="limMsg" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="85.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nonzeroMsg" layoutX="20.0" layoutY="109.0" text="non-ZeroMsg" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="105.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="50.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <Button id="btnSubmit" fx:id="btnSubmit" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#actionSubmit" prefHeight="28.0" prefWidth="100.0" text="Submit" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="btnClearAll" fx:id="btnClearAll" layoutX="81.0" layoutY="12.0" mnemonicParsing="false" onAction="#actionClearAll" prefHeight="28.0" prefWidth="100.0" text="ClearAll" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="140.0">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
